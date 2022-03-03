@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    crear libros
+    <form-libros/>
 </div>
 @endsection

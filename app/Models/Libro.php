@@ -15,7 +15,8 @@ class Libro extends Model
         'autor',
         'isbn',
         'cantidad',
-        'fecha_publicacion'
+        'fecha_publicacion',
+        'editorial_id'
     ];
 
     //scopes
@@ -27,5 +28,11 @@ class Libro extends Model
         }
 
         return $query;
+    }
+
+    //scope
+    public function editorial()
+    {
+        return $this->belongsTo(Editorial::class);
     }
 }

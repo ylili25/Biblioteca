@@ -60,7 +60,7 @@ export default {
             },
             editorial:{
                 id: null,
-                nombre: null
+                nombre: null,
             },
             errores: {}
         }

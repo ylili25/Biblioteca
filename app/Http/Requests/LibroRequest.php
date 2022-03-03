@@ -28,6 +28,7 @@ class LibroRequest extends FormRequest
             'autor'              => 'required|string',
             'cantidad'           => 'required|numeric',
             'fecha_publicacion'  => 'required|date',
+            'editorial_id'       => 'required|exists:editoriales,id'
         ];
 
         switch ($this->method()) {

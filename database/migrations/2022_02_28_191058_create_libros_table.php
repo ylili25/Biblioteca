@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('isbn');
             $table->integer('cantidad');
             $table->date('fecha_publicacion');
+            $table->foreignId('editorial_id')->constrained('editoriales');
             $table->timestamps();
         });
     }

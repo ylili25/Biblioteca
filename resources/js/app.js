@@ -27,7 +27,14 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('listado-editoriales', require('./editoriales/List.vue').default);
 Vue.component('form-editoriales', require('./editoriales/Form.vue').default);
 
+//Libros
+Vue.component('listado-libros', require('./libros/List.vue').default);
+Vue.component('form-libros', require('./libros/Form.vue').default);
 
+//Prestamos
+Vue.component('listado-prestamos', require('./prestamos/List.vue').default);
+Vue.component('form-prestamos', require('./prestamos/Form.vue').default);
+Vue.component('prestamos-pendientes', require('./prestamos/Pendientes.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

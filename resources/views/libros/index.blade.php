@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    index libros
+    <listado-libros/>
 </div>
 @endsection

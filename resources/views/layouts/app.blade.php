@@ -33,9 +33,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('editoriales.index') }}">Editoriales</a>
-                        </li>
+                        @role('Administrador')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('editoriales.index') }}">Editoriales</a>
+                            </li>
+                        @endrole
+                        @role('Administrador')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('libros.index') }}">Libros</a>
+                            </li>
+                        @endrole
+                        @role('Administrador')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('prestamos.index') }}">Préstamos</a>
+                            </li>
+                        @endrole
+                        @role('Prestatario')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('prestamos.create') }}">Nuevo Préstamo</a>
+                            </li>
+                        @endrole
+                        @role('Prestatario')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('prestamos.pendientes') }}">Mis Préstamos</a>
+                            </li>
+                        @endrole
                     </ul>
 
                     <!-- Right Side Of Navbar -->

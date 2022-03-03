@@ -118,4 +118,11 @@ class EditorialController extends Controller
             'message' => 'Editorial eliminada correctamente'
         ]);
     }
+
+    public function listado()
+    {
+        $editoriales  = Editorial::all();
+
+        return response()->json($editoriales);
+    }
 }

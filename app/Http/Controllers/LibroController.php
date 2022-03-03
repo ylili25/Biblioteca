@@ -22,10 +22,11 @@ class LibroController extends Controller
     {
 
         if ($request->wantsJson()) {
-            $columns = ['id', 'nombre'];
+            $columns = ['id', 'nombre', 'autor', 'isbn', 'cantidad', 'fecha_publicacion','editorial_id'];
 
             $libros = Libro::ofSearch($request->input('query'))
                 ->orderBy('nombre')
+                ->with('editorial:id,nombre')
                 ->paginate($request->input('per_page'), $columns);
 
             return response()->json($libros);

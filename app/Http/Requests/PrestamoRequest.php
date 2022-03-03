@@ -24,17 +24,8 @@ class PrestamoRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id'       => 'required|exists:users,id',
             'libro_id'      => 'required|exists:libros,id',
-            'estado'        => 'required|in:entregado,devuelto'
-        ];
-    }
-
-    public function attributes()
-    {
-        return[
-            'user_id'   => 'usuario',
-            'libro_id'  => 'libro'
+            'estado'        => 'required|in:Entregado,Devuelto'
         ];
     }
 }

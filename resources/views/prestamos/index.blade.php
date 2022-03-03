@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    <form-libros :libro_id="{{ $id }}" />
+    <listado-prestamos/>
 </div>
 @endsection
